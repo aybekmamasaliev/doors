@@ -1,12 +1,32 @@
 import React from "react";
 import s from "./ReviewList.module.css";
-import user from "../../media/user.svg";
+import ReviewItem from "../ReviewItem/ReviewItem";
+import right from "../../media/right.svg";
+import left from "../../media/left.svg";
 
-const Reviews = () => {
+
+const ReviewList = () => {
   return (
     <>
+      <div className={s.list_of_revs}>
+        <p className={s.rev_title}>Отзывы наших клиентов</p>
+        <div className={s.dis_f}>
+          <ReviewItem />
+          <ReviewItem />
+          <ReviewItem />
+          <ReviewItem />
+        </div>
+        <div className={s.swipe_revs}>
+            <button className={s.circle_btn}>
+              <img src={left} alt="" />
+            </button>
+            <button className={s.circle_btn}>
+              <img src={right} alt="" />
+            </button>
+        </div>
+      </div>
     </>
   );
 };
 
-export default Reviews;
+export default ReviewList;
