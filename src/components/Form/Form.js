@@ -1,13 +1,29 @@
 import React, { useState } from "react";
 import s from "./Form.module.css";
+import Modal from "../Modal/Modal";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+
+  const [vis, setVis] = useState("hidden");
+
+  const changeVis = (e) => {
+    e.preventDefault();
+    vis === "hidden" ? setVis("visible") : setVis("hidden");
+  };
+
+  const fixVis=()=>{
+    vis === "hidden" ? setVis("visible") : setVis("hidden");
+  }
+
+
+
   return (
     <div className={s.form_border} >
+      <Modal vis={vis} onClick={fixVis}/>
         <p className={s.any_questions}>Остались вопросы?</p>
-      <form>
+      <form >
         <div className={s.form}>
           <div>
             <input
@@ -27,13 +43,13 @@ const Form = () => {
               placeholder="телефон"
             />
           </div>
-          <button className={s.btn}>Оставить заявку</button>
+          <button className={s.btn} onClick={changeVis}>Оставить заявку</button>
         </div>
 
         <div>
           <textarea placeholder="СООБЩЕНИЕ" className={s.textarea}></textarea>
         </div>
-        <button className={s.btn} style={{display:"none"}}>Оставить заявку</button>
+        <button className={s.btn} style={{display:"none"}} >Оставить заявку</button>
       </form>
     </div>
   );

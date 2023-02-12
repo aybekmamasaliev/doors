@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Form from './components/Form/Form';
+import Modal from './components/Modal/Modal';
 import NewsList from './components/News/NewsList';
 import OurServices from './components/OurServices/OurServices';
 import ReviewItem from './components/ReviewItem/ReviewItem';
@@ -13,6 +14,7 @@ function App() {
       <Form/>
       <OurServices />
       <NewsList/>
+      {/* <Modal /> */}
       {/* <Btn /> */}
       <ReviewList />
     </div>
