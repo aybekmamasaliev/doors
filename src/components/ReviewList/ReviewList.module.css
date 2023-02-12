@@ -2,26 +2,15 @@
   height: 410px;
   width: 100%;
   position: relative;
-  border: 1px solid black;
 }
 
-.rev_title {
-  width: 542px;
-  height: 60px;
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 150%;
-  font-variant: small-caps;
-  color: #414141;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
+
+
 
 .dis_f{
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
 .circle_btn{
@@ -30,6 +19,7 @@
   border-radius: 50%;
   background: rgba(65, 65, 65, 0.15);
   border: 5px solid #F1F6FF;
+  cursor: pointer;
 }
 
 .swipe_revs{

@@ -3,13 +3,14 @@ import s from "./ReviewList.module.css";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import right from "../../media/right.svg";
 import left from "../../media/left.svg";
+import Title from "../Title/Title"
 
 
 const ReviewList = () => {
   return (
     <>
       <div className={s.list_of_revs}>
-        <p className={s.rev_title}>Отзывы наших клиентов</p>
+        <Title>Отзывы наших клиентов</Title>
         <div className={s.dis_f}>
           <ReviewItem />
           <ReviewItem />
