@@ -13,8 +13,8 @@ const Form = () => {
     vis === "hidden" ? setVis("visible") : setVis("hidden");
   };
 
-  const fixVis=()=>{
-    vis === "hidden" ? setVis("visible") : setVis("hidden");
+  const fixVis=(x)=>{
+    setVis(x)
   }
 
 

@@ -4,16 +4,13 @@ import x from "../../media/x.svg";
 import galka from "../../media/galka.svg";
 
 const Modal = (props) => {
-
   let vis = props.vis;
-
   const changeVisibility = () => {
     if (vis === "visible") {
       vis = "hidden";
     }
     props.onClick(vis);
   };
-
   return (
     <>
       <div  style={{ visibility: vis}}>
